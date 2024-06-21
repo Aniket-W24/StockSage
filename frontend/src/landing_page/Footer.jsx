@@ -2,7 +2,7 @@ import "./footer.css";
 
 export default function Footer(){
     return (
-        <footer className="mt-5" style={{backgroundColor: "	rgb(245,245,245)"}}>
+        <footer className="mt-5" style={{backgroundColor: "rgb(248,248,248)"}}>
             <div className="container mt-5 border-top">
                 <div className="row mt-5">
                     <div className="col">
