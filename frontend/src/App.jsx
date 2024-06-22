@@ -12,7 +12,7 @@ function App() {
         {/* <ProductsPage /> */}
         {/* <Signup /> */}
         {/* <SupportPage /> */}
-
+        {/* <h1>Home page</h1> */}
 
     </>
   )
