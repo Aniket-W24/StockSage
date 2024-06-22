@@ -21,10 +21,7 @@ function ProductsPage(){
             imgUrl="/media/images/products-console.png"
                 productName="Console"
                 productDescription="The central dashboard for your Zerodha account. Gain insights into your trades and investments with in-depth reports and visualisations."
-                tryDemo=""
                 learnMore=""
-                googlePlay=""
-                appStore=""
             />
             <LeftSection 
                 imgUrl="/media/images/products-coin.png"
@@ -39,10 +36,7 @@ function ProductsPage(){
             imgUrl="/media/images/products-console.png"
                 productName="Kite Connect API"
                 productDescription="Build powerful trading platforms and experiences with our super simple HTTP/JSON APIs. If you are a startup, build your investment app and showcase it to our clientbase."
-                tryDemo=""
                 learnMore=""
-                googlePlay=""
-                appStore=""
             />
               <LeftSection 
                 imgUrl="/media/images/varsity-products.png"
@@ -53,6 +47,9 @@ function ProductsPage(){
                 googlePlay=""
                 appStore=""
             />
+            <h5 className="mt-5 mb-5 text-center fw-medium text-muted">
+            Want to know more about our technology stack? Check out the <a href="" style={{textDecoration: "none", color: "rgb(13, 110, 253)"}}>Zerodha.tech</a> blog.
+            </h5>
             <Universe />
         </>
     )

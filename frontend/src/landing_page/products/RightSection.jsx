@@ -2,10 +2,7 @@ export default function RightSection({
     imgUrl,
     productName,
     productDescription,
-    tryDemo,
     learnMore,
-    googlePlay,
-    appStore,
   }) {
     return (
       <div className="container">
