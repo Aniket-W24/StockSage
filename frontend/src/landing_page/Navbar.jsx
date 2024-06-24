@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 export default function Navbar(){
     return (
-<nav className="navbar navbar-expand-lg sticky-top border-bottom bg-white mb-5">
+<nav className="navbar navbar-expand-lg sticky-top border-bottom bg-white">
   <div className="container">
     <Link className="navbar-brand" to="/">
         <img src="media/images/zerodha_logo.svg" style={{width: "25%"}}/>
