@@ -32,8 +32,8 @@ app.get("/allholdings", async(req, res)=> {
 
 app.get("/allpositions", async(req, res)=> {
   let allpositions = await PositionsModel.find({});
-  console.log(allpositions);
-  res.send("got the positions data");
+  // console.log(allpositions);
+  res.json(allpositions);
 })
 
 app.listen(PORT, () => {
