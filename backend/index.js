@@ -61,6 +61,10 @@ const userVerification = (req, res) => {
   })
 }
 
+app.get("/", (req, res)=> {
+  res.send('StockSage Backend is Running');
+})
+
 app.post("/", userVerification)
 
 app.get("/allholdings", async (req, res) => {
