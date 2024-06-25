@@ -8,11 +8,12 @@ import GeneralContext from "./GeneralContext.jsx";
 import "./BuyActionWindow.css";
 
 const BuyActionWindow = ({ uid }) => {
+  console.log(uid);
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setStockPrice] = useState(0.0);
 
   const handleBuyClick = () => {
-    axios.post("http://localhost:3002/newOrder", {
+    axios.post("http://localhost:3000/newOrder", {
       name: uid,
       qty: stockQuantity,
       price: stockPrice,
@@ -55,7 +56,7 @@ const BuyActionWindow = ({ uid }) => {
       </div>
 
       <div className="buttons">
-        <span>Margin required ₹140.65</span>
+        <span>Margin required {stockPrice * stockQuantity}</span>
         <div>
           <Link className="btn btn-blue" onClick={handleBuyClick}>
             Buy

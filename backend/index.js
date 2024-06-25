@@ -13,6 +13,7 @@ const jwt = require("jsonwebtoken");
 const { HoldingsModel } = require("./models/HoldingsModel.js");
 const { PositionsModel } = require("./models/PositionsModel.js");
 const { UsersModel } = require("./models/UsersModel.js");
+const { OrdersModel } = require("./models/OrdersModel.js");
 
 const PORT = process.env.PORT || 3000;
 const mongo_Url = process.env.MONGO_URL;
@@ -125,6 +126,20 @@ app.post("/login", async (req, res, next) => {
   } catch (error) {
     console.error(error);
   }
+});
+
+//😂 New order route
+app.post("/newOrder", async (req, res) => {
+  let newOrder = new OrdersModel({
+    name: req.body.name,
+    qty: req.body.qty,
+    price: req.body.price,
+    mode: req.body.mode,
+  });
+
+  newOrder.save();
+
+  res.send("Order saved!");
 });
 
 app.listen(PORT, () => {

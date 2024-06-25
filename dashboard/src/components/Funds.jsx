@@ -11,7 +11,7 @@ const Funds = () => {
       </div>
 
       <div className="row">
-        <div className="col">
+        <div className="col-8">
           <span>
             <p>Equity</p>
           </span>
@@ -74,7 +74,7 @@ const Funds = () => {
           </div>
         </div>
 
-        <div className="col">
+        <div className="col-4">
           <div className="commodity">
             <p>You don't have a commodity account</p>
             <Link className="btn btn-blue">Open Account</Link>

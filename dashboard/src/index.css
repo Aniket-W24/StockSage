@@ -98,6 +98,7 @@ code {
 
 .table {
   border: 1px solid #ddd;
+  width: 500px;
   padding: 5% 8%;
 }
 
