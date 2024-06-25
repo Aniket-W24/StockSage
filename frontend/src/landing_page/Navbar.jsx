@@ -31,7 +31,7 @@ export default function Navbar(){
           <Link className="nav-link ms-4" aria-current="page" to="/support">Support</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link ms-4" aria-current="page" to="/"><i class="fa-solid fa-bars"></i></Link>
+          <Link className="nav-link ms-4" aria-current="page" to="/"><i className="fa-solid fa-bars"></i></Link>
         </li>
       </ul>
       </form>

@@ -18,8 +18,8 @@ export default function Stats(){
                 </div>
                 <div className="col-6 p-5">
                     <img src="media/images/ecosystem.png" style={{width: "90%", marginBottom: "1rem"}}/>
-                    <a href="" className="mx-5" style={{textDecoration: "none"}}>Explore our products <i class="fa-solid fa-arrow-right"></i></a>
-                    <a href="" style={{textDecoration: "none"}}>Try Kite demo <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="" className="mx-5" style={{textDecoration: "none"}}>Explore our products <i className="fa-solid fa-arrow-right"></i></a>
+                    <a href="" style={{textDecoration: "none"}}>Try Kite demo <i className="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>

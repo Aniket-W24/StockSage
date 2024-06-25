@@ -10,7 +10,7 @@ export default function CreateTicket() {
       <div className="row">
         <div className="col-4 p-5">
           <h4 className="fw-normal text-muted mb-3">
-            <i class="fa-solid fa-plus"></i> &nbsp;Account Opening
+            <i className="fa-solid fa-plus"></i> &nbsp;Account Opening
           </h4>
           <a
             href=""
@@ -88,7 +88,7 @@ export default function CreateTicket() {
 
         <div className="col-4 p-5">
           <h4 className="fw-normal text-muted mb-3">
-          <i class="fa-regular fa-user"></i> &nbsp;Your Zerodha Account
+          <i className="fa-regular fa-user"></i> &nbsp;Your Zerodha Account
           </h4>
           <a
             href=""
@@ -166,7 +166,7 @@ export default function CreateTicket() {
 
         <div className="col-4 p-5">
           <h4 className="fw-normal text-muted mb-3">
-          <i class="fa-solid fa-chart-simple"></i> &nbsp;Trading and Markets
+          <i className="fa-solid fa-chart-simple"></i> &nbsp;Trading and Markets
           </h4>
           <a
             href=""
@@ -244,7 +244,7 @@ export default function CreateTicket() {
 
         <div className="col-4 p-5">
           <h4 className="fw-normal text-muted mb-3">
-          <i class="fa-solid fa-wallet"></i> &nbsp;Funds
+          <i className="fa-solid fa-wallet"></i> &nbsp;Funds
           </h4>
           <a
             href=""
@@ -297,7 +297,7 @@ export default function CreateTicket() {
 
         <div className="col-4 p-5">
           <h4 className="fw-normal text-muted mb-3">
-          <i class="fa-solid fa-user"></i> &nbsp;Console
+          <i className="fa-solid fa-user"></i> &nbsp;Console
           </h4>
           <a
             href=""
@@ -375,7 +375,7 @@ export default function CreateTicket() {
 
         <div className="col-4 p-5">
           <h4 className="fw-normal text-muted mb-3">
-          <i class="fa-solid fa-coins"></i> &nbsp;Coin
+          <i className="fa-solid fa-coins"></i> &nbsp;Coin
           </h4>
           <a
             href=""

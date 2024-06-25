@@ -17,8 +17,8 @@ export default function LeftSection({
             <h1 className="fw-medium fs-2 mb-3">{productName}</h1>
             <p className="mb-4 text-muted">{productDescription}</p>
             <div className="mb-3">
-                <a href={tryDemo} style={{textDecoration: "none", color: "rgb(13, 110, 253)", paddingRight: "4.5rem"}}>Try Demo<i class="fa-solid fa-arrow-right"></i></a>
-                <a href={learnMore} style={{textDecoration: "none", color: "rgb(13, 110, 253)"}}>Learn More<i class="fa-solid fa-arrow-right"></i></a>
+                <a href={tryDemo} style={{textDecoration: "none", color: "rgb(13, 110, 253)", paddingRight: "4.5rem"}}>Try Demo<i className="fa-solid fa-arrow-right"></i></a>
+                <a href={learnMore} style={{textDecoration: "none", color: "rgb(13, 110, 253)"}}>Learn More<i className="fa-solid fa-arrow-right"></i></a>
             </div>
             <div>
                 <a href={googlePlay} style={{textDecoration: "none", marginRight: "1.5rem"}}><img src="/media/images/google-play-badge.svg" /></a>
