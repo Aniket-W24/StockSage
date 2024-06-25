@@ -34,7 +34,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/signup",
+        "http://localhost:3000/signup",
         {
           ...inputValue,
         },
@@ -42,6 +42,7 @@ const Signup = () => {
       );
       const { success, message } = data;
       if (success) {
+        navigate("/support");
         handleSuccess(message);
         setTimeout(() => {
           navigate("/");

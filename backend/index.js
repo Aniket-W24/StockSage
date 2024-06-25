@@ -25,13 +25,20 @@ async function main() {
   await mongoose.connect(mongo_Url);
 }
 
-app.use(cors());
+app.use(cors({
+  // origin: 'http://localhost:5173' || 'http://localhost:5174/', // Your frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true // Allow credentials
+}));
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 //😂 Middleware for Authorisation
 const userVerification = (req, res) => {
+  console.log("middleware userVerification");
   const token = req.cookies.token
   if (!token) {
     return res.json({ status: false })
@@ -92,6 +99,7 @@ app.post("/signup", async (req, res, next) => {
 
 //😂 Login Route
 app.post("/login", async (req, res, next) => {
+  console.log(req.body);
   try {
     const { email, password } = req.body;
     if (!email || !password) {

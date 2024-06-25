@@ -4,6 +4,7 @@ import App from './App.jsx'
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import HomePage from './landing_page/home/HomePage.jsx';
+import Home from './landing_page/signup/Home.jsx';
 import Signup from './landing_page/signup/Signup.jsx';
 import Login from './landing_page/signup/Login.jsx';
 import AboutPage from './landing_page/about/AboutPage.jsx';
@@ -25,7 +26,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
   <Navbar />
     <Routes>
+      
       <Route path="/" element={<HomePage />} />
+      <Route path="/home" element={<Home />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/login" element={<Login />} />
       <Route path="/about" element={<AboutPage />} />
