@@ -42,7 +42,7 @@ const Signup = () => {
       );
       const { success, message } = data;
       if (success) {
-        navigate("/support");
+        window.location.href = 'http://localhost:5173/';
         handleSuccess(message);
         setTimeout(() => {
           navigate("/");
@@ -128,7 +128,7 @@ const Signup = () => {
             </span>
           </form>
 
-          <ToastContainer />
+          <ToastContainer style={{width: "25%"}}/>
         </div>
       </div>
       <BottomText />

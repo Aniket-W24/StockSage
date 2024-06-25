@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-
+import { useCookies } from "react-cookie";
 import { Link } from "react-router-dom";
 
 const Menu = () => {
   const [selectedMenu, setSelectedMenu] = useState(0);
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
+  const [cookies, setCookie, removeCookie] = useCookies(['token']);
 
   const handleMenuClick = (index) => {
     setSelectedMenu(index);
@@ -12,6 +13,11 @@ const Menu = () => {
 
   const handleProfileClick = (index) => {
     setIsProfileDropdownOpen(!isProfileDropdownOpen);
+  };
+
+  const handleLogout = () => {
+    removeCookie("token");
+    window.location.href = "http://localhost:5174/signup";
   };
 
   const menuClass = "menu";
@@ -93,6 +99,22 @@ const Menu = () => {
         <div className="profile" onClick={handleProfileClick}>
           <div className="avatar">ZU</div>
           <p className="username">USERID</p>
+          {isProfileDropdownOpen && <button
+              type="submit"
+              onClick={handleLogout}
+              style={{
+                width: "5rem",
+                borderRadius: "0.5rem",
+                border: "none",
+                padding: "0.5rem",
+                backgroundColor: "#387ed1",
+                color: "white",
+                marginBottom: "1rem"
+              }}
+            >
+              Logout
+            </button>
+        }
         </div>
       </div>
     </div>

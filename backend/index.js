@@ -26,11 +26,17 @@ async function main() {
   await mongoose.connect(mongo_Url);
 }
 
+// app.use(cors({
+//   origin: 'http://localhost:5173', // Your frontend URL
+//   // origin : "*",
+//   methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//   allowedHeaders: ['Content-Type', 'Authorization'],
+//   credentials: true // Allow credentials
+// }));
+
 app.use(cors({
-  // origin: 'http://localhost:5173' || 'http://localhost:5174/', // Your frontend URL
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true // Allow credentials
+  origin: true, // Reflect the request origin
+  credentials: true // Allow cookies to be sent
 }));
 app.use(bodyParser.json());
 app.use(cookieParser());
@@ -74,7 +80,7 @@ app.post("/signup", async (req, res, next) => {
   const users = await UsersModel.find({});
   // console.log(users);
   //res.json(users);
-  console.log(req.body);
+  // console.log(req.body);
   try {
     // console.log(req.body);
     const { email, password, username } = req.body;
@@ -84,7 +90,7 @@ app.post("/signup", async (req, res, next) => {
     }
     const user = await UsersModel.create({ email, password, username });
     const token = createSecretToken(user._id);
-    console.log(token);
+    // console.log(token);
     res.cookie("token", token, {
       withCredentials: true,
       httpOnly: false,
@@ -100,7 +106,7 @@ app.post("/signup", async (req, res, next) => {
 
 //😂 Login Route
 app.post("/login", async (req, res, next) => {
-  console.log(req.body);
+  // console.log(req.body);
   try {
     const { email, password } = req.body;
     if (!email || !password) {
@@ -121,7 +127,7 @@ app.post("/login", async (req, res, next) => {
     });
     res
       .status(201)
-      .json({ message: "User logged in successfully", success: true });
+      .json({ message: "User logged in successfully", success: true })
     next();
   } catch (error) {
     console.error(error);
@@ -136,11 +142,14 @@ app.post("/newOrder", async (req, res) => {
     price: req.body.price,
     mode: req.body.mode,
   });
-
   newOrder.save();
-
   res.send("Order saved!");
 });
+
+// app.get("/showOrders", async(req, res)=>{
+//   let allOrders = await OrdersModel.find({owner : req.cookies.token});
+//   res.json(allholdings);
+// })
 
 app.listen(PORT, () => {
   console.log(`App is listening to port ${PORT}`);

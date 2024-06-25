@@ -32,7 +32,6 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-    console.log(inputValue);
       const { data } = await axios.post(
         "http://localhost:3000/login",
         {
@@ -43,11 +42,13 @@ const Login = () => {
       console.log(data);
       const { success, message } = data;
       if (success) {
+        window.location.href = 'http://localhost:5173/';
         handleSuccess(message);
         setTimeout(() => {
           navigate("/");
         }, 1000);
       } else {
+        console.log("inner error");
         handleError(message);
       }
     } catch (error) {
