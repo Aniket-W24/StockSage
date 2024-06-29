@@ -34,7 +34,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:3000/signup",
+        "https://stocksagebackend.onrender.com/signup",
         {
           ...inputValue,
         },
@@ -42,7 +42,7 @@ const Signup = () => {
       );
       const { success, message } = data;
       if (success) {
-        window.location.href = 'http://localhost:5173/';
+        window.location.href = 'https://stocksagedashboard.onrender.com/';
         handleSuccess(message);
         setTimeout(() => {
           navigate("/");
