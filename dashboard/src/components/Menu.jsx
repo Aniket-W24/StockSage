@@ -17,7 +17,7 @@ const Menu = () => {
 
   const handleLogout = () => {
     removeCookie("token");
-    window.location.href = "http://localhost:5174/signup";
+    window.location.href = "https://stocksagefrontend.onrender.com/signup";
   };
 
   const menuClass = "menu";
