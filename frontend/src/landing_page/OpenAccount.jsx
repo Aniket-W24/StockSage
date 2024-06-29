@@ -1,9 +1,5 @@
 import { Link } from "react-router-dom";
 export default function OpenAccount() {
-  const handleClick = () => {
-    console.log("button clicked");
-    window.location.href = "https://stocksagefrontend.onrender.com/signup";
-  };
   return (
     <div className="container mt-5 mb-5">
       <div className="row text-center">
@@ -14,7 +10,6 @@ export default function OpenAccount() {
         </p>
         <button
           className="p-2 btn btn-primary fs-5"
-          onClick={handleClick}
           style={{ width: "25%", margin: "0 auto" }}
         >
           Sign up now
