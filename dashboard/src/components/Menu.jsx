@@ -17,7 +17,7 @@ const Menu = () => {
 
   const handleLogout = () => {
     removeCookie("token");
-    window.location.href = "https://stocksagefrontend.onrender.com/signup";
+    window.location.href = "https://stocksagefrontend.onrender.com/";
   };
 
   const menuClass = "menu";
