@@ -34,7 +34,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://stocksagebackend.onrender.com/signup",
+        "https://stocksage-backend.vercel.app/signup",
         {
           ...inputValue,
         },

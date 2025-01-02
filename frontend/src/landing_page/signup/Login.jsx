@@ -33,7 +33,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://stocksagebackend.onrender.com/login",
+        "https://stocksage-backend.vercel.app/login",
         {
           ...inputValue,
         },
