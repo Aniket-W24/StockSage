@@ -1,3 +1,3 @@
 import index from "../index.js";
 
-export default index;
+module.exports = index;
