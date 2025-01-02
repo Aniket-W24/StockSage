@@ -8,7 +8,7 @@ const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
 
   useEffect(() => {
-    axios.get("https://stocksagebackend.onrender.com/allHoldings").then((res) => {
+    axios.get("https://stocksage-backend.vercel.app/allHoldings").then((res) => {
       console.log(res.data);
       setAllHoldings(res.data);
     });
