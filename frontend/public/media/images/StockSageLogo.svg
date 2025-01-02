@@ -1,0 +1,11 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="50" viewBox="0 0 200 50">
+  <!-- Logo Symbol -->
+  <circle cx="25" cy="25" r="20" fill="#387ed1" />
+  <path d="M18 30 L25 15 L32 30 Z" fill="#fff" />
+
+  <!-- Logo Text -->
+  <text x="60" y="35" font-family="Arial, sans-serif" font-size="24" fill="#387ed1" font-weight="bold">
+    StockSage
+  </text>
+</svg>
