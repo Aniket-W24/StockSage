@@ -34,10 +34,12 @@ async function main() {
 //   credentials: true // Allow credentials
 // }));
 
-app.use(cors({
-  origin: true, // Reflect the request origin
-  credentials: true // Allow cookies to be sent
-}));
+app.use(
+  cors({
+    origin: true, // Reflect the request origin
+    credentials: true, // Allow cookies to be sent
+  })
+);
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
@@ -46,26 +48,28 @@ app.use(express.json());
 //😂 Middleware for Authorisation
 const userVerification = (req, res) => {
   console.log("middleware userVerification");
-  const token = req.cookies.token
+  const token = req.cookies.token;
   if (!token) {
-    return res.json({ status: false })
+    return res.json({ status: false });
   }
   jwt.verify(token, process.env.TOKEN_KEY, async (err, data) => {
     if (err) {
-     return res.json({ status: false })
+      return res.json({ status: false });
     } else {
-      const user = await UsersModel.findById(data.id)
-      if (user) return res.json({ status: true, user: user.username })
-      else return res.json({ status: false })
+      const user = await UsersModel.findById(data.id);
+      if (user) return res.json({ status: true, user: user.username });
+      else return res.json({ status: false });
     }
-  })
-}
+  });
+};
 
-app.get("/", (req, res)=> {
-  res.send('StockSage Backend is Running');
-})
+app.get("/", (req, res) => {
+  res.json({
+    message: "🦄🌈✨🌎HOSTED🌏✨🌈🦄",
+  });
+});
 
-app.post("/", userVerification)
+app.post("/", userVerification);
 
 app.get("/allholdings", async (req, res) => {
   let allholdings = await HoldingsModel.find({});
@@ -131,7 +135,7 @@ app.post("/login", async (req, res, next) => {
     });
     res
       .status(201)
-      .json({ message: "User logged in successfully", success: true })
+      .json({ message: "User logged in successfully", success: true });
     next();
   } catch (error) {
     console.error(error);
