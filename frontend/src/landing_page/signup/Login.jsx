@@ -42,7 +42,7 @@ const Login = () => {
       console.log(data);
       const { success, message } = data;
       if (success) {
-        window.location.href = 'https://stocksagedashboard.onrender.com/';
+        window.location.href = 'https://stocksage-dashboard.vercel.app';
         handleSuccess(message);
         setTimeout(() => {
           navigate("/");
